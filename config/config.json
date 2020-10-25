@@ -6,7 +6,7 @@
         "xliveSign_task": true, /* 直播签到 */
         "xlive_bag_send_task": true, /* 送出即将到期的礼物 */
         "coin_task": { /* 投币任务，将enable设置为false或把coin_task设置为false就可关闭 */
-            "enable": true,
+            "enable": false,
             "num": 5, /* 投币数量，如果当天已经投币超过这个数量则不会继续投币，取值范围为0-5 */
             "target_exp": 28800 /* 达到目标经验值停止投币，如果当天投币后达到经验值第二天及以后就不会投币 */
         },
@@ -15,8 +15,8 @@
         "silver2coin_task": true,/* 银瓜子兑换硬币 */
         "lottery_task": {/* 互动抽奖转发，范围是当天中午12点到昨天中午12点自己动态中的互动抽奖 */
             "enable": true,
-            "reply": "从未中奖，从未放弃[doge]",/* 回复原动态评论，如果传入数组则每次随机取一个 */
-            "repost": "从未中奖，从未放弃[doge]",/* 转到自己动态的评论，如果传入数组则每次随机取一个 */
+            "reply": "抽奖从未停止，中奖从未开始[doge]",/* 回复原动态评论，如果传入数组则每次随机取一个 */
+            "repost": "抽奖从未停止，中奖从未开始[doge]",/* 转到自己动态的评论，如果传入数组则每次随机取一个 */
             "keywords": ["#互动抽奖#", "#抽奖#"] /* 关键字转发 */
         },
         "clean_dynamic_task": {/* 清理自己的动态，包括过期抽奖，失效动态 */
@@ -48,7 +48,7 @@
              */
         },
         "judgement_task": { /*  风纪委员投票(每次运行仅投一次) */
-            "enable": false, /*  对风纪委员投票不了解的请不要开启本功能 */
+            "enable": true, /*  对风纪委员投票不了解的请不要开启本功能 */
             "params": {    /* 投票参数，参见下面参数说明 */
                 "vote": 4,
                 "attr": 0
@@ -185,13 +185,13 @@
     },
     "log_file": "BiliExp.log",/* 日志文件，不输出请留空 */
     "log_console": true,/* 是否把日志输出到控制台 */
-    "email": "",/* 邮箱，消息推送用，不用请留空 */
+    "email": "admin@bili33.top",/* 邮箱，消息推送用，不用请留空 */
     "SCKEY": "",/* SCKEY，微信消息推送用，不用请留空 */
     "users": [{/* users为用户数组，每个账户包含一个cookieDatas和tasks参数 */
         "cookieDatas": {/* 下面三项参数为必填参数(DedeUserID在但账户情况下选填，仅用于区分账户)，获取方式见说明 */
-            "SESSDATA": "账号SESSDATA",
-            "bili_jct": "账号bili_jct",
-            "DedeUserID": "账号uid"
+            "SESSDATA": "437cc56e%2C1619138507%2Cdf425*a1",
+            "bili_jct": "d9ae7db22b446b0a874b66c9abaa9903",
+            "DedeUserID": "44666814"
         },/* 下面tasks参数与最上面default参数作用相同，但优先级更高，用于定制每个账号的参数，
              default中未出现的参数在tasks参数中出现则无效 */
         "tasks": {}
