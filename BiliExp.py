@@ -109,7 +109,7 @@ def main(*args, **kwargs):
 
 if __name__=="__main__":
     kwargs = {}
-    opts, args = getopt(sys.argv[1:], "hvc:l:",["configfile=","logfile="])
+    opts, args = getopt(sys.argv[1:], "hc:l:",["configfile=","logfile="])
     for opt, arg in opts:
         if opt in ('-c','--configfile'):
             kwargs["config"] = arg
@@ -117,8 +117,5 @@ if __name__=="__main__":
             kwargs["log"] = arg
         elif opt == '-h':
             print('BliExp -c <configfile> -l <logfile>')
-            sys.exit()
-        elif opt == '-v':
-            print('BiliExp v1.0.0')
             sys.exit()
     main(**kwargs)

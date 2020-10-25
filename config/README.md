@@ -1,6 +1,6 @@
 config
 ====  
-##### 这里是BiliExp的进阶配置文件
+##### 这里是BiliExp-Actions的进阶配置文件
 
 * 1.config.json(功能及账户配置文件)
     此文件配置完成后请复制到secrets(advconfig)中，与简单部署中的secrets(biliconfig)冲突，这里有更高优先级
